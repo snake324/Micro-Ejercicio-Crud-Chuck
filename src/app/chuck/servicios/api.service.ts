@@ -10,7 +10,8 @@ export class ApiService {
   private frase: Frase = { value: "", icon_url: "", id: "", url: "" };
   private ChuckUrl = "https://api.chucknorris.io/jokes/random";
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
+
 
   public getFrase(): Observable<Frase> {
     return this.http.get<Frase>(this.ChuckUrl);
